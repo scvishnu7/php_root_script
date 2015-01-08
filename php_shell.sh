@@ -13,19 +13,21 @@ echo "==========================="
 # Do things according to the argument passed
 
 case "$1" in
-	httpd)
-		echo "httpd opts";
+	sshd)
+		echo "sshd opts";
 		#check 2nd options for what to do
 		case "$2" in
 			stop)
-				service httpd stop
+				service sshd stop
+				
 			;;
 			restart)
-				echo "httpd restart";
-				service httpd restart
+				echo "sshd restart";
+				service sshd restart
+				
 			;;
 			*)
-				echo "unrecognized command for httpd";
+				echo "unrecognized command for sshd";
 			;;
 		esac
 	;;
